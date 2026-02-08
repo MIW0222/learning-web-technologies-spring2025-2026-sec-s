@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <h2>Student Registration</h2>
+    <form>
+        <label for="name">Full Name</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter Full Name" required><br><br>
+
+        <label for="email">Email Address</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter Email Address" required><br><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password" placeholder="Enter Password" required><br><br>
+
+        <label for="gender">Gender</label><br>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label><br><br>
+
+        <label for="skills">Skills</label><br>
+        <input type="checkbox" id="c++" name="skills" value="c++" required>
+        <label for="c++">C++</label>
+        <input type="checkbox" id="java" name="skills" value="java" required>
+        <label for="java">Java</label>
+        <input type="checkbox" id="sql" name="skills" value="sql" required>
+        <label for="sql">SQL</label>
+        <input type="checkbox" id="c#" name="skills" value="c#" required>
+        <label for="c#">C#</label>
+        <input type="checkbox" id="python" name="skills" value="python" required>
+        <label for="python">Python</label>
+        <input type="checkbox" id="html" name="skills" value="html" required>
+        <label for="html">HTML</label><br><br>
+
+        <label for="department">Department</label><br>
+        <select id="department" name="department" required>
+            <option value="">-- Select --</option>
+            <option value="cse">Computer Science & Engineering</option>
+            <option value="eee">Electrical & Electronics Engineering</option>
+            <option value="ba">Business Administration</option>
+        </select><br><br>
+
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="10" cols="100" placeholder="Your Message" required></textarea><br><br>
+
+        <button type="submit" >Submit</button>
+    </form>
+    
+</body>
+</html>
