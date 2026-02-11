@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body>
+
+    <h1>Student Registration Form</h1>
+
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <p>
+                <label for="fullName"><strong>Full Name:</strong></label><br>
+                <input type="text" id="fullName" name="full_name" required placeholder="Enter your full name">
+            </p>
+
+            <p>
+                <label for="email"><strong>Email Address:</strong></label><br>
+                <input type="email" id="email" name="email" required placeholder="email@address.com">
+            </p>
+
+            <p>
+                <label for="password"><strong>Password:</strong></label><br>
+                <input type="password" id="password" name="password" required minlength="8">
+            </p>
+
+            <p>
+                <label for="dob"><strong>Date of Birth:</strong></label><br>
+                <input type="date" id="dob" name="date_of_birth" required>
+            </p>
+
+            <p>
+                <strong>Gender:</strong><br>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label><br>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Academic Information</legend>
+
+            <p>
+                <label for="department">Department:</label><br>
+                <select id="department" name="department" required>
+                    <option value="">-- Select Department --</option>
+                    <option value="cse">Computer Science & Engineering</option>
+                    <option value="eee">Electrical & Electronic Engineering</option>
+                    <option value="civil">Civil Engineering</option>
+                    <option value="me">Mechanical Engineering</option>
+                    <option value="arch">Architecture</option>
+                    <option value="bBA">Business Administration</option>
+                    <option value="english">English</option>
+                </select>
+            </p>
+
+            <p>
+                <strong>Skills / Interests (select all that apply):</strong><br>
+                <input type="checkbox" id="programming" name="skills" value="programming">
+                <label for="programming">Programming</label><br>
+
+                <input type="checkbox" id="webdev" name="skills" value="web_development">
+                <label for="webdev">Web Development</label><br>
+
+                <input type="checkbox" id="ml" name="skills" value="machine_learning">
+                <label for="ml">Machine Learning / AI</label><br>
+
+                <input type="checkbox" id="networking" name="skills" value="networking">
+                <label for="networking">Computer Networking</label><br>
+
+                <input type="checkbox" id="design" name="skills" value="uiux_design">
+                <label for="design">UI/UX Design</label><br>
+
+                <input type="checkbox" id="mobile" name="skills" value="mobile_dev">
+                <label for="mobile">Mobile App Development</label>
+            </p>
+
+        </fieldset>
+
+        <p style="margin-top: 2rem;">
+            <button type="submit">Submit Registration</button>
+            <button type="reset">Reset Form</button>
+        </p>
+
+        <footer>
+        <small>&copy; 2026 Student Registration System [23-54266-3 Mashkur Ibtesham Wazed]</small>
+        </footer>
+    </form>
+
+</body>
+</html>
