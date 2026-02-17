@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <link rel="stylesheet" href="style1.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: darkgray;
+            color: darkslategray;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: darkslateblue;
+            text-align: center;
+            margin: 2rem 0 1.5rem;
+            font-size: 2.1rem;
+        }
+
+        fieldset {
+            background-color: white;
+            border: 1px solid lightgray;
+            border-radius: 8px;
+            margin: 1.5rem auto;
+            padding: 1.8rem;
+            max-width: 580px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        p {
+            margin-bottom: 1.3rem;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 0.4rem;
+            font-weight: 500;
+        }
+
+        .highlight {
+            background-color: lemonchiffon;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid gray;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .radio-group, .checkbox-group {
+            margin-top: 0.5rem;
+        }
+
+        button {
+            padding: 0.8rem 1.6rem;
+            font-size: 1.05rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="mainTitle" style="letter-spacing: 1px;">Student Registration Form</h1>
+
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <p>
+                <label for="fullName"><strong>Full Name:</strong></label><br>
+                <input type="text" id="fullName" name="full_name" required placeholder="Enter your full name">
+            </p>
+
+            <p>
+                <label for="email"><strong>Email Address:</strong></label><br>
+                <input type="email" id="email" name="email" required placeholder="email@address.com">
+            </p>
+
+            <p>
+                <label for="password"><strong>Password:</strong></label><br>
+                <input type="password" id="password" name="password" required minlength="8">
+            </p>
+
+            <p>
+                <label for="date"><strong>Date of Birth:</strong></label><br>
+                <input type="date" id="date" name="date_of_birth" required>
+            </p>
+
+            <p>
+                <strong>Gender:</strong><br>
+                <span class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </span>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Academic Information</legend>
+
+            <p>
+                <label for="department">Department:</label><br>
+                <select id="department" name="department" required>
+                    <option value="">-- Select Department --</option>
+                    <option value="cse">Computer Science & Engineering</option>
+                    <option value="eee">Electrical & Electronic Engineering</option>
+                    <option value="civil">Civil Engineering</option>
+                    <option value="me">Mechanical Engineering</option>
+                    <option value="arch">Architecture</option>
+                    <option value="bba">Business Administration</option>
+                    <option value="english">English</option>
+                </select>
+            </p>
+
+            <p>
+                <strong>Skills / Interests <span class="highlight">(select all that apply)</span>:</strong><br>
+                <span class="checkbox-group">
+                    <input type="checkbox" id="programming" name="skills" value="programming">
+                    <label for="programming">Programming</label><br>
+
+                    <input type="checkbox" id="webdev" name="skills" value="web_development">
+                    <label for="webdev">Web Development</label><br>
+
+                    <input type="checkbox" id="ml" name="skills" value="machine_learning">
+                    <label for="ml">Machine Learning / AI</label><br>
+
+                    <input type="checkbox" id="networking" name="skills" value="networking">
+                    <label for="networking">Computer Networking</label><br>
+
+                    <input type="checkbox" id="design" name="skills" value="uiux_design">
+                    <label for="design">UI/UX Design</label><br>
+
+                    <input type="checkbox" id="mobile" name="skills" value="mobile_dev">
+                    <label for="mobile">Mobile App Development</label>
+                </span>
+            </p>
+        </fieldset>
+
+        <p style="text-align: center; margin: 2.5rem 0 1.5rem;">
+            <button type="submit" style="background-color: seagreen; color: white;">Submit Registration</button>
+            <button type="reset" style="background-color: crimson; color: white;">Reset Form</button>
+        </p>
+
+        <footer style="text-align: center; margin-top: 3rem; color: dimgray; font-size: 0.9rem;">
+            <small>© 2026 Student Registration System [23-54266-3 Mashkur Ibtesham Wazed]</small>
+        </footer>
+
+    </form>
+
+</body>
+</html>
