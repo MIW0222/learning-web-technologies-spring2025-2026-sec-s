@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Task 3 (III)</title>
+</head>
+
+<body>
+    <h1>Arrays and Basic Objects</h1>
+    <script>
+        alert("Welcome, User!");
+        console.log("Welcome to the browser console!");
+        document.write("This is a message from JavaScript!");
+
+        var courses = ["Introduction to Programming", "Object Oriented Programming I", "Introduction to Database Systems", "Software Engineering", "Web Technologies"];
+
+        document.write("<h2>Courses List: </h2>");
+        for (var i = 0; i < courses.length; i++) {
+            console.log("Course " + (i+1) + ": " + courses[i]);
+            document.write("<p>Course " + (i+1) + ": " + courses[i] + "</p>");
+        }
+
+        var newCourse = prompt("Please enter a new course name: ");
+        courses.push(newCourse);
+
+        document.write("<h2>Updated Courses List: </h2>");
+        for (var i = 0; i < courses.length; i++) {
+            console.log("Course " + (i+1) + ": " + courses[i]);
+            document.write("<p>Course " + (i+1) + ": " + courses[i] + "</p>");
+        }
+
+        var arrLength = courses.length;
+        document.write("<p>Total number of courses: " + arrLength + "</p>");
+        var removedCourse = courses.pop();
+        document.write("<p>Removed course: " + removedCourse + "</p>");
+        var newStartCourse = courses.unshift("Introduction to Computer Science");
+
+        document.write("<h2>Final Courses List: </h2>");
+        document.write("<p>Added course at the beginning: Introduction to Computer Science</p>");
+        for (var i = 0; i < courses.length; i++) {
+            console.log("Course " + (i+1) + ": " + courses[i]);
+            document.write("<p>Course " + (i+1) + ": " + courses[i] + "</p>");
+        }
+
+        var student = {
+            name: "Mashkur Ibtesham Wazed",
+            id: "23-54266-3",
+            department: "CSE",
+            cgpa: 3.91
+        };
+
+        document.write("<h2>Student Information: </h2>");
+        document.write("<p>Student Name: " + student.name + "</p>");
+        document.write("<p>Student ID: " + student.id + "</p>");
+        document.write("<p>Student Department: " + student.department + "</p>");
+        document.write("<p>Student CGPA: " + student.cgpa + "</p>");
+
+        var students = [
+            {
+                name: "Mashkur Ibtesham Wazed",
+                id: "23-54266-3",
+                department: "CSE",
+                cgpa: 3.91
+            },
+            {
+                name: "John Doe",
+                id: "23-12345-6",
+                department: "EEE",
+                cgpa: 4.00
+            },
+            {
+                name: "Jane Smith",
+                id: "23-67890-1",
+                department: "BBA",
+                cgpa: 4.00
+            }
+        ];
+
+        document.write("<h2>Students List: </h2>");
+        for (var i = 0; i < students.length; i++) {
+            var s = students[i];
+            console.log("Student " + (i+1) + ": " + s.name + ", ID: " + s.id + ", Department: " + s.department + ", CGPA: " + s.cgpa);
+            document.write("<p>Student " + (i+1) + ": " + s.name + ", ID: " + s.id + ", Department: " + s.department + ", CGPA: " + s.cgpa + "</p>");
+        }
+    </script>
+</body>

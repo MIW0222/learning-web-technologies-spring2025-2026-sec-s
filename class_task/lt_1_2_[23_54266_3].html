@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Task 3 (I)</title>
+</head>
+
+<body>
+    <h1>JavaScript Basics and User Interaction</h1>
+    <script>
+        alert("Welcome, User!");
+        console.log("Welcome to the browser console!");
+        document.write("This is a message from JavaScript!");
+
+        var name1 = "Mashkur";
+        var name2 = "Wazed";
+        var age = 25;
+
+        console.log("Name : " + name1 + " " + name2);
+        console.log("Age = " + age);
+        console.log("Age + 1 = " + (age + 1));
+        
+        document.write("<p>Name: " + name1 + " " + name2 + "</p>");
+        document.write("<p>Age: " + age + " years</p>");
+        document.write("<p>Next year age: " + (age + 1) + " years</p>");
+
+        var userInput1 = prompt("Please enter first number:");
+        console.log(`First number = ${userInput1}`);
+
+        var userInput2 = prompt("Please enter second number:");
+        console.log(`Second number = ${userInput2}`);
+
+        var num1 = parseInt(userInput1);
+        var num2 = Number(userInput2);
+
+        document.write("<p>First number: " + num1 + "</p>");
+        document.write("<p>Second number: " + num2 + "</p>");
+
+        console.log(`Sum = ${num1 + num2}`);
+        console.log(`Difference = ${num1 - num2}`);
+        console.log(`Product = ${num1 * num2}`);
+
+        document.write("<p>Sum = "+ (num1 + num2) + "</p>");
+        document.write("<p>Difference = "+ (num1 - num2) + "</p>");
+        document.write("<p>Product = "+ (num1 * num2) + "</p>");
+
+        if (num1%2 === 0) {
+            console.log(`${num1} is an even number.`);
+            document.write("<p>" + num1 + " is an even number.</p>");
+        } else {
+            console.log(`${num1} is an odd number.`);
+            document.write("<p>" + num1 + " is an odd number.</p>");
+        }
+
+        if (num2%2 === 0) {
+            console.log(`${num2} is an even number.`);
+            document.write("<p>" + num2 + " is an even number.</p>");
+        } else {
+            console.log(`${num2} is an odd number.`);
+            document.write("<p>" + num2 + " is an odd number.</p>");
+        }
+
+    </script>
+</body>
