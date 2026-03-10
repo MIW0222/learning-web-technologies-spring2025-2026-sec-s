@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.form-row input {
+    padding: 8px;
+}
+
+#roll-no {
+    width: 100px;
+}
+
+#student-name {
+    width: 260px;
+}
+
+#add-btn {
+    padding: 8px 16px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#add-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.controls {
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#search-input {
+    padding: 8px;
+    width: 220px;
+}
+
+button {
+    padding: 8px 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+#sort-btn {
+    background-color: #9c27b0;
+    color: white;
+}
+
+#highlight-first-btn {
+    background-color: #ff9800;
+    color: white;
+}
+
+#student-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.student-item {
+    background-color: #ffffff;
+    padding: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.student-item span {
+    flex: 1;
+    font-weight: 500;
+}
+
+.student-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+.student-item.present {
+    background-color: #e8f5e9;
+    border-color: #81c784;
+}
+
+.student-item .actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-edit {
+    background-color: #4caf50;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.highlight {
+    background-color: #fff176 !important;
+}
+
+.highlight-first {
+    border: 3px solid #ff5722;
+    background-color: #fff3e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.stats {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #444;
+}
