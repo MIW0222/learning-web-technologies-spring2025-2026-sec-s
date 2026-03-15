@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: darkslategray;
+    background-color: ghostwhite;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+body.dark {
+    background-color: black;
+    color: lightgray;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: navy;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.4rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 1.2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    background-color: lightgray;     
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+h2 {
+    color: royalblue;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px gray;    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark .project-card {
+    background-color: dimgray;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px dimgray;  
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.4rem;
+}
+
+.project-info h3 {
+    margin-bottom: 0.8rem;
+    color: navy;
+}
+
+body.dark .project-info h3 {
+    color: lightblue;
+}
+
+.project-info p {
+    margin-bottom: 1rem;
+}
+
+.project-link {
+    display: inline-block;
+    background-color: royalblue;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-link:hover {
+    background-color: mediumblue;
+}
+
+.form-group {
+    margin-bottom: 1.6rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid silver;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+body.dark input, body.dark textarea {
+    background-color: dimgray;
+    color: lightgray;
+    border-color: gray;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: royalblue;
+    box-shadow: 0 0 0 3px lightsteelblue;
+}
+
+.error {
+    color: crimson;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 4px;
+    min-height: 1.2rem;
+}
+
+.form-buttons {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+button {
+    padding: 10px 24px;
+    margin: 0 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.05rem;
+    transition: all 0.25s;
+}
+
+button[type="submit"] {
+    background-color: royalblue;
+    color: white;
+}
+
+button[type="reset"] {
+    background-color: tomato;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+footer {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* Scroll to Top Button */
+#scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: royalblue;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px gray;    
+}
+
+#scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav li {
+        display: block;
+        margin: 0.8rem 0;
+    }
+   
+    #theme-toggle {
+        position: static;
+        margin-top: 1rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+   
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
