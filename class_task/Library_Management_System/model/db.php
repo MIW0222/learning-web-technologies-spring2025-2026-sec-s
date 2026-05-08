@@ -3,7 +3,7 @@ function getDB() {
     $host = 'localhost';
     $user = 'root';
     $pass = '';
-    $dbname = 'university_library';
+    $dbname = 'library_db';
     
     $conn = mysqli_connect($host, $user, $pass);
     
