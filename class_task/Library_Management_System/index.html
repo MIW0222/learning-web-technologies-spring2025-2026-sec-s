@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>University Library Management System</title>
+</head>
+<body>
+<div class="container">
+    <h1>University Library Management System</h1>
+    
+    <div class="form-section">
+        <h2>Add New Book</h2>
+        <form id="bookForm" onsubmit="addBook(event)">
+            <input type="text" name="title" placeholder="Book Title" required>
+            <input type="text" name="author" placeholder="Author Name" required>
+            <input type="text" name="category" placeholder="Category (e.g., Fiction, Science)" required>
+            <select name="availability">
+                <option value="Available">Available</option>
+                <option value="Borrowed">Borrowed</option>
+            </select>
+            <button type="submit">Add Book</button>
+        </form>
+    </div>
+    
+    <h3>Book Collection</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="booksTableBody">
+            <tr><td colspan="5" style="text-align:center;">Loading books...</td></tr>
+        </tbody>
+    </table>
+    
+    <div id="updateForm" class="update-form">
+        <h3>Edit Book Details</h3>
+        <form id="updateBookForm" onsubmit="updateBook(event)">
+            <input type="hidden" name="id" id="updateId">
+            <input type="text" name="title" id="updateTitle" required placeholder="Book Title">
+            <input type="text" name="author" id="updateAuthor" required placeholder="Author Name">
+            <input type="text" name="category" id="updateCategory" required placeholder="Category">
+            <select name="availability" id="updateAvailability">
+                <option value="Available">Available</option>
+                <option value="Borrowed">Borrowed</option>
+            </select>
+            <button type="submit">Update Book</button>
+            <button type="button" class="cancel-btn" onclick="document.getElementById('updateForm').style.display='none'">Cancel</button>
+        </form>
+    </div>
+</div>
+
+<script src="js/ajax.js"></script>
+</body>
+</html>

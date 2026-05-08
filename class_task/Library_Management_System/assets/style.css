@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+        
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, blueviolet 0%, darkorchid 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+        
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 30px;
+}
+        
+h1 {
+    color: darkslategray;
+    margin-bottom: 10px;
+}
+        
+h2, h3 {
+    color: dimgray;
+    margin: 20px 0 15px 0;
+    border-bottom: 2px solid blueviolet;
+    padding-bottom: 10px;
+}
+        
+.form-section {
+    background: ghostwhite;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+        
+input, select {
+    width: calc(25% - 10px);
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 14px;
+}
+        
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+        
+button[type="submit"] {
+    background: forestgreen;
+    color: white;
+}
+        
+button[type="submit"]:hover {
+    background: limegreen;
+}
+        
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+        
+th, td {
+    border: 1px solid lightgray;
+    padding: 12px;
+    text-align: left;
+}
+        
+th {
+    background: blueviolet;
+    color: white;
+}
+        
+tr:nth-child(even) {
+    background: ghostwhite;
+}
+        
+.update-form {
+    display: none;
+    background: lightgoldenrodyellow;
+    border: 2px solid gold;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+        
+.update-form input, .update-form select {
+    width: calc(25% - 10px);
+}
+        
+.cancel-btn {
+    background: gray;
+    color: white;
+}
+        
+.cancel-btn:hover {
+    background: dimgray;
+}
+        
+@media (max-width: 768px) {
+    input, select {
+        width: calc(100% - 10px);
+        display: block;
+    }
+}
